@@ -11,13 +11,13 @@ function [idx s similarity_mat] = hier_clust(data, cons, type, n)
         n=max(idx);
     end
     
-    figure(4)
+    figure;
     [s h] = silhouette(data,idx);
     similarity_mat = exp(-dist);
     
-    figure(2)
+    figure;
     hist(idx);
-    figure (3);
+    figure;
        
     cmap = colormap(hsv(n));
     
